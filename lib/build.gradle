@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+//sourceCompatibility = "7"
+//targetCompatibility = "7"
+//只需要设置1.8就行
+sourceCompatibility = "8"
+targetCompatibility = "8"
