@@ -9,18 +9,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.zaozaofan.lib.MyClass;
+import com.zaozaofan.lib.RxJava1;
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        MyClass.main(null);
+//        2019-05-22 16:37:02.882 18408-18408/com.zaozaofan.rxjavademo I/System.out: hello
+//        2019-05-22 16:37:02.882 18408-18408/com.zaozaofan.rxjavademo I/System.out: 0
+//        2019-05-22 16:37:02.882 18408-18408/com.zaozaofan.rxjavademo I/System.out: Linux
+//        2019-05-22 16:37:02.882 18408-18408/com.zaozaofan.rxjavademo I/System.out: http://www.android.com/
+
 
     }
 
     public void onClick(View view) {
         startApp(this,"com.google.android.apps.authenticator2");
     }
+
 
 
     public void startApp(Context context,String packageName){
@@ -64,4 +75,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void interval(View view) {
+        RxJava1.interval();
+    }
+
+    public void intervalRange(View view) {
+        RxJava1.intervalRange();
+    }
 }
